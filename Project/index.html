@@ -12,45 +12,71 @@
 
 	<link rel="icon" href="logo.png" type="image/png" sizes="32x32">
 	<style type="text/css">
-		
+		.jumbotron
+    {
+     /* background: url('path/to/images/banner.jpg') no-repeat center center; 
+      background-size: cover;*/
+      padding: 5em inherit;
+      min-height: 50px;
+      padding-top: 1%;
+      padding-bottom: 0.5%;
+    }
 	</style>
 </head>
-<!-- <frameset rows="100,*" frameborder="1">
-	<frame name="modau" src="frame_top.htm">
-	<frameset cols="200,*">
-		<frame name="luachon" src="frame_left.htm">
-		<frame name="hinhanh" src="frame_center.htm">		
-	</frameset>
-</frameset>
-<body>
-	
-	
-</body> -->
+
+
 
 
 <body style="height:1500px">
 
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-		<a class="navbar-brand" href="#">Logo</a>
-		<ul class="navbar-nav">
-			<li class="nav-item">
-				<a class="nav-link" href="page_data.htm">Dữ liệu</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="page_statistics.htm">Thống kê</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="page_find.htm">Tìm kiếm</a>
-			</li>
-			
-		</ul>
+	<div class="jumbotron text-center" style="margin-bottom:0">
+		<h1>HỆ THỐNG GIÁM SÁT BIỂN SỐ XE</h1>
+		<p>Chú thích!</p> 
+	</div>
+
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<a class="navbar-brand" href="page_main.htm">Giám sát</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="page_data.php">Dữ liệu</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="page_statistics.php">Thống kê</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="page_find.htm">Tìm kiếm</a>
+				</li>    
+			</ul>
+		</div>  
 	</nav>
 
-	<div class="container-fluid" style="margin-top:80px">
-		<h3>Top Fixed Navbar</h3>
-		<p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
-		<h1>Scroll this page to see the effect</h1>
-	</div>
+		<form name="F1">
+		<table align="center">
+			<tr>
+				<th><img src="image/image1.jpg" width="500px" height="300px"></th>
+				<th><img src="image/image2.jpg" width="500px" height="300px"></th>
+			</tr>
+			<tr></tr>
+			<tr>
+				<th>Người Gửi</th>
+				<th>Biển Số Xe</th>
+			</tr>
+			<tr></tr>
+			<tr>
+				<th><input type="button" name="getPSon" value="Lấy hình người gửi"></th>
+				<th><input type="button" name="getPNum" value="Lấy biển số xe"></th>
+			</tr>
+			<tr></tr>
+			<tr>
+				<th align="right"><input type="button" name="btnSave" value="Save"></th>
+				<th align="left"><input type="button" name="btnCancel" value="Cancel"></th>
+			</tr>
+		</table>
+	</form>
 
 </body>
 </html>
@@ -62,48 +88,5 @@
 
 
 
-
-
-
-<!-- <body>	 -->
-		<!-- <div class="jumbotron text-center" style="margin-bottom:0">
-			<h1>HỆ THỐNG GIÁM SÁT BIỂN SỐ XE</h1>
-
-		</div>
-	-->
-	<!-- <div class="container mt-3">
-		<!-- Nav tabs -->
-		<!-- <ul class="nav nav-tabs bs
-				<a class="nav-link active" data-toggle="tab" href="#home">Trang chủ</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" data-toggle="tab" href="D:/ĐA/DA_LTHT_VDK/Project/page_data.htm">Dữ liệu</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" data-toggle="tab" href="page_statistics.htm">Thống kê</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" data-toggle="tab" href="page_find.htm">Tìm kiếm</a>
-			</li>
-		</ul>  -->
-		<!-- Tab panes -->
-		<!-- <div class="tab-content">
-			<div id="home" class="container tab-pane active"><br>
-				<h3>HOME</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-			<div id="data" class="container tab-pane fade"><br>
-				<h3>Menu 1</h3>
-				<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-			</div>
-			<div id="menu2" class="container tab-pane fade"><br>
-				<h3>Menu 2</h3>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-			</div>
-		</div> -->
-		<!-- </div>   -->
-
-		<!-- </body> -->
-		</html>
 
 
