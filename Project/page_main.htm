@@ -31,6 +31,13 @@
      min-height: 50px;
      padding-top: 1%;
      padding-bottom: 0.5%;
+
+ }
+ .fakeimg {
+ 	background-color: #aaa;
+ 	width: 100%;
+ 	min-height: 400px;
+ 	padding: 20px;
  }
 </style>
 </head>
@@ -38,7 +45,7 @@
 
 	<div class="jumbotron text-center" style="margin-bottom:0">
 		<h1>HỆ THỐNG GIÁM SÁT BIỂN SỐ XE</h1>
-		<p>Chú thích!</p> 
+		
 	</div>
 
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -61,7 +68,7 @@
 		</div>  
 	</nav>
 
-	<form name="F1">
+	<!-- <form name="F1">
 		<table align="center">
 			<tr>
 				<th><img src="image/image1.jpg" width="500px" height="300px"></th>
@@ -83,7 +90,56 @@
 				<th align="left"><input type="button" name="btnCancel" value="Cancel"></th>
 			</tr>
 		</table>
-	</form>
+	</form> -->
+	<div class="container" style="margin-top:30px">
+		<div class="row">
+
+
+			<div class="col-sm-6">
+				<div class="fakeimg">Input Image</div>
+				<h5 class="text-center" style="margin-top:10px">Người Gửi</h5>
+				<input type="button"  class="btn btn-outline-secondary" name="getPSon" value="Lấy hình người gửi">
+				<!-- <h2>About Me</h2>
+				<h5>Photo of me:</h5>
+				<div class="fakeimg">Fake Image</div>
+				<p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+				<h3>Some Links</h3>
+				<p>Lorem ipsum dolor sit ame.</p>
+				<ul class="nav nav-pills flex-column">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">Active</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#">Disabled</a>
+					</li>
+				</ul>
+				<hr class="d-sm-none"> -->
+			</div>
+			<div class="col-sm-6">
+				<div class="fakeimg">Input Image</div>
+				<h5 class="text-center" style="margin-top:10px">Biển Số Xe</h5>
+				<th><input type="button"  class="btn btn-outline-secondary"name="getPNum" value="Lấy biển số xe"></th>
+
+				<!-- <h2>TITLE HEADING</h2>
+				<h5>Title description, Dec 7, 2017</h5>
+				<div class="fakeimg">Fake Image</div>
+				<p>Some text..</p>
+				<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+				<br>
+				<h2>TITLE HEADING</h2>
+				<h5>Title description, Sep 2, 2017</h5>
+				<div class="fakeimg">Fake Image</div>
+				<p>Some text..</p>
+				<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> -->
+			</div>
+		</div>
+	</div>
 </body>
 </html>
 
