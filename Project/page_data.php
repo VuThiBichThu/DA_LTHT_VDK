@@ -28,7 +28,7 @@ echo '<!DOCTYPE html>
 	
 	<div class="jumbotron text-center" style="margin-bottom:0">
 		<h1>HỆ THỐNG GIÁM SÁT BIỂN SỐ XE</h1>
-		<p>Chú thích!</p> 
+		
 	</div>
 
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
