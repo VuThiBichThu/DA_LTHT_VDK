@@ -22,6 +22,12 @@
 
 		}
 	</script>
+	<script language="JavaScript">
+		function saveData()
+		{
+
+		}
+	</script>
 	<style type="text/css">
 		.jumbotron
 		{
@@ -69,7 +75,7 @@
 			</tr>
 			<tr></tr>
 			<tr>
-				<th>Người Gửi</th>
+				<th align="text-center">Người Gửi</th>
 				<th>Biển Số Xe</th>
 			</tr>
 			<tr></tr>
@@ -77,11 +83,38 @@
 				<th><input type="button" name="getPSon" value="Lấy hình người gửi"></th>
 				<th><input type="button" name="getPNum" value="Lấy biển số xe"></th>
 			</tr>
+		</table>
+		<hr>
+		<table align="center">
+			<tr>
+				<td> Người Gửi</td>
+				<td> <input type="text" name="img_ps"></td>
+			</tr>
+			<tr>
+				<td> Biển Số Xe</td>
+				<td><input type="text" name="plate_num"></td>
+			</tr>
 			<tr></tr>
 			<tr>
-				<th align="right"><input type="button" name="btnSave" value="Save"></th>
-				<th align="left"><input type="button" name="btnCancel" value="Cancel"></th>
+				<th><input type="button" name="btnSave" value="Save"></th>
+				<th><input type="button" name="btnCancel" value="Cancel"></th>
 			</tr>
+		</table>
+		<hr>
+		<p align="center"> TÍNH PHÍ </p>
+		<table align="center">
+			<tr>
+				<td> Biển Số Xe</td>
+				<td> <input type="text" name="img_ps"></td>
+			</tr>
+			<tr>
+				<td> Người Gửi</td>
+				<td><input type="text" name="plate_num" disabled="true"></td>
+			</tr>
+			<tr></tr>
+			<tr>
+				<td> Phí</td>
+				<td><input type="text" name="plate_num" disabled="true"></td>
 		</table>
 	</form>
 </body>
