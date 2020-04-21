@@ -49,7 +49,6 @@ echo '<!DOCTYPE html>
 	<style type="text/css">
 		.jumbotron
 		{
-     
      padding: 5em inherit;
      min-height: 50px;
      padding-top: 1%;

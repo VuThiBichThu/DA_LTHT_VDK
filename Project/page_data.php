@@ -16,11 +16,10 @@ echo '<!DOCTYPE html>
 	<style type="text/css">
 		.jumbotron
 		{
-    
-     padding: 5em inherit;
-     min-height: 50px;
-     padding-top: 1%;
-     padding-bottom: 0.5%;
+        	padding: 5em inherit;
+			min-height: 50px;
+			padding-top: 1%;
+			padding-bottom: 0.5%;
  }
 </style>
 </head>
