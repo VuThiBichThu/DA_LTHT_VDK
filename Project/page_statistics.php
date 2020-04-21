@@ -3,7 +3,7 @@ $link=mysqli_connect("localhost","root","") or die("Could not connect DB".mysqli
 $db_selected=mysqli_select_db($link,'DOAN');
 
 $date = date_create(date("y-m-d"));
-date_sub($date,date_interval_create_from_date_string("1 day"));
+//date_sub($date,date_interval_create_from_date_string("1 day"));
 //echo date_format($date,"y-m-d");
 
 $date = $date->format("y-m-d");
@@ -24,13 +24,15 @@ $money = mysqli_fetch_assoc($count_fee);
 {
 	echo $row[1]."-".$row[2]."-".$row[3]."-".$row[4]."-".$row[5]."-".$row[6];
 } */
+
 $result = mysqli_query($link,"INSERT INTO STATISTICS(day,quantity,sum_fee,lost,overnight) 
  						VALUES (CAST('". $date ."' AS DATE),'".$amount['total']."','".$money['total']."',0,0)");
 $show = mysqli_query($link,"SELECT * FROM STATISTICS");
-while($row=mysqli_fetch_array($show))
+
+/*while($row=mysqli_fetch_array($show))
 {
 	echo $row[0]." - ".$row[1]." - ".$row[2]." - ".$row[3]." - ".$row[4];
-} 
+} */
 //mysqli_free_result($result);
 mysqli_close($link); 
 
@@ -95,28 +97,19 @@ echo '<!DOCTYPE html>
 						<th>Số xe mất</th>
 						<th>Số xe ở lại qua đêm</th>
 					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>12-04-2020</td>
-						<td>100</td>
-						<td>1 000 000</td>
-						<td> 0 </td>
-						<td> 5 </td>
-					</tr>
-					<tr>
-						<td>12-04-2020</td>
-						<td>100</td>
-						<td>1 000 000</td>
-						<td> 0 </td>
-						<td> 5 </td>
-					</tr>
-
-				</tbody>
-
-			</form>
-		</div>
-	</body>
-	</html>';
+				</thead>';
+while($row=mysqli_fetch_array($show))
+	{
+		echo "<tbody>
+			<tr>
+				<td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td>
+				<td>".$row[3]."</td><td>".$row[4]."</td></tr>
+		</tbody>";
+	}
+	echo	'</table>
+		</form>
+	</div>
+</body>
+</html>';
 	?>
 	
