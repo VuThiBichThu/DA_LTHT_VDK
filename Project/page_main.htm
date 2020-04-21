@@ -25,7 +25,9 @@
 	<script language="JavaScript">
 		function saveData()
 		{
-
+		//	txtimg = document.F1.txt_img.value;
+		//	txtplate = document.F1.txt_plate.value;
+			document.F1.submit();
 		}
 	</script>
 	<style type="text/css">
@@ -67,7 +69,7 @@
 		</div>  
 	</nav>
 
-	<form name="F1">
+	<form name="F1" action="xulysavedata.php" method="post">
 		<table align="center">
 			<tr>
 				<th><img src="image/image1.jpg" width="500px" height="300px"></th>
@@ -88,16 +90,16 @@
 		<table align="center">
 			<tr>
 				<td> Người Gửi</td>
-				<td> <input type="text" name="img_ps"></td>
+				<td> <input type="text" name="txt_img"></td>
 			</tr>
 			<tr>
 				<td> Biển Số Xe</td>
-				<td><input type="text" name="plate_num"></td>
+				<td><input type="text" name="txt_plate"></td>
 			</tr>
 			<tr></tr>
 			<tr>
-				<th><input type="button" name="btnSave" value="Save"></th>
-				<th><input type="button" name="btnCancel" value="Cancel"></th>
+				<th><input type="button" name="btnSave" value="Save" onclick="saveData()"></th>
+				<th><input type="reset" name="btnCancel" value="Cancel"></th>
 			</tr>
 		</table>
 		<hr>
