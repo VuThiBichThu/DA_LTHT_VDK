@@ -13,21 +13,28 @@
 	<script language="JavaScript">
 		function getIDperson()
 		{
-
+			//txtimg =document.F1.txt_img.value
+			//document.getElementById("image_human").src=`image/${txtimg}.jpg`
+			var fullPath = document.getElementById("image_human").src;
+     		var filename = fullPath.replace(/^.*[\\\/]/, '');
+			document.F1.txt_img.value = filename;
 		}
+		
 	</script>
 	<script language="JavaScript">
 		function getPlateNumber()
 		{
-
+			var fullPath = document.getElementById("image_moto").src;
+     		var filename = fullPath.replace(/^.*[\\\/]/, '');
+			document.F1.txt_plate.value = filename;
 		}
 	</script>
 	<script language="JavaScript">
 		function saveData()
 		{
-		//	txtimg = document.F1.txt_img.value;
-		//	txtplate = document.F1.txt_plate.value;
-		document.F1.submit();
+			txtimg = document.F1.txt_img.value;
+			txtplate = document.F1.txt_plate.value;
+			document.F1.submit();
 	}
 </script>
 <style type="text/css">
@@ -45,7 +52,7 @@
  .fakeimg {
  	background-color: #aaa;
  	width: 100%;
- 	min-height: 400px;
+ 	min-height: 300px;
  	padding: 20px;
  }
 
@@ -59,7 +66,7 @@
 	</div>
 
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-		<a class="navbar-brand" href="page_main.htm">Giám sát</a>
+		<a class="navbar-brand" href="page_main.php">Giám sát</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -82,14 +89,19 @@
 		<div class="container text-center" style="margin-top:30px">
 			<div class="row justify-content-center">
 				<div class="col-sm-6 justify-content-center">
-					<div class="fakeimg">Input Image</div>
-					<h5 class="text-center" style="margin-top:10px">Người Gửi</h5>
-					<input type="button" class="btn btn-outline-secondary text-center" name="getPSon" value="Lấy hình người gửi">
+					<div class="fakeimg"><img src="image/human (1).jpg" srcset="" alt="" 
+											id="image_human" width="400px" height="300px"></div>
+
+					<h5 class="text-center" style="margin-top:10px">NGƯỜI GỬI</h5>
+					<input type="button" class="btn btn-outline-secondary text-center" name="getPSon" 
+					value="Lấy hình người gửi" onclick="getIDperson()">
 				</div>
 				<div class="col-sm-6 justify-content-center">
-					<div class="fakeimg" >Output Image</div>
-					<h5 class="text-center" style="margin-top:10px">Biển Số Xe</h5>
-					<input type="button" class="btn btn-outline-secondary text-center" name="getPNum" value="Lấy biển số xe">
+					<div class="fakeimg"><img src="image/moto (1).jpg" srcset="" alt="" 												id="image_moto" width="400px" height="300px"></div>
+
+					<h5 class="text-center" style="margin-top:10px">BIỂN SỐ XE</h5>
+					<input type="button" class="btn btn-outline-secondary text-center" name="getPNum" 
+					value="Lấy biển số xe" onclick="getPlateNumber()"> 
 				</div>
 			</div>
 			<hr>
@@ -106,25 +118,28 @@
 							</div>
 							<div class="form-group">
 								<label >Biển số xe:</label>
-								<input type="text" name="txt_plate">
+								<input type="text" name="txt_plate"> 
 							</div >
-							<input type="button" class="btn btn-primary" name="btnSave" value="Save" onclick="saveData()">
+							<input type="button" class="btn btn-primary" name="btnSave" value="Save" 
+							onclick = "saveData()">
 							<input type="reset" class="btn btn-primary" name="btnCancel" value="Cancel">
 						</div>
 					</form>
 				</div>
+	</form>
+	<form name="F2" action="xulyfee.php" method="post">
 				<div class="container col-sm-6 ">
 					<div class="row ">
 						<div class="col-12 "><input type="button" class="btn btn-primary" name="btnCancel" value="Tính phí"></div>
 					</div>
 					<br>
 					<div class="row">
-						<div class="col-3 bg-dark text-white"><label >Biển Số Xe:</label></div>
+						<div class="col-3 bg-dark text-white"><label >Biển Số:</label></div>
 						<div class="col-8 "><input type="text" name="img_ps"></div>
 					</div>
 					<br>
 					<div class="row">
-						<div class="col-3 bg-dark text-white"><label >Người Gửi:</label></div>
+						<div class="col-3 bg-dark text-white"><label >Người Gửi Xe:</label></div>
 						<div class="col-8 "><input type="text" name="plate_num" disabled="true"></div>
 
 					</div>
@@ -135,12 +150,8 @@
 					</div>
 				</div>
 				<hr>
-
 			</div>
-
-
-		</form>
-
+	</form>
 
 	</body>
 	</html>

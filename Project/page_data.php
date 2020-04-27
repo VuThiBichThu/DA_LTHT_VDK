@@ -31,7 +31,7 @@ echo '<!DOCTYPE html>
 	</div>
 
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-		<a class="navbar-brand" href="page_main.htm">Giám sát</a>
+		<a class="navbar-brand" href="page_main.php">Giám sát</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 			<span class="navbar-toggler-icon"></span>
 		</button>
