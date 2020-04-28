@@ -120,6 +120,7 @@
 									<label >Biển số xe:</label>
 									<input type="text" class="form-control" name="txt_plate"> 
 								</div >
+								<br>
 								<input type="button" class="btn btn-primary" name="btnSave" value="Save" 
 								onclick = "saveData()">
 								<input type="reset" class="btn btn-primary" name="btnCancel" value="Cancel">
@@ -134,18 +135,23 @@
 							</div>
 							<br>
 							<div class="row">
-								<div class="col-3 "><label >Biển Số:</label></div>
+								<div class="col-4 "><label >ID xe:</label></div>
 								<div class="col-8 "><input type="text" class="form-control" name="img_ps"></div>
 							</div>
 							<br>
 							<div class="row">
-								<div class="col-3 "><label >Người Gửi Xe:</label></div>
+								<div class="col-4 "><label >Phí:</label></div>
 								<div class="col-8 "><input type="text" class="form-control" name="plate_num" disabled="true"></div>
 
 							</div>
 							<br>
 							<div class="row">
-								<div class="col-3 "><label >Phí:</label></div>
+								<div class="col-4 "><label >Thời gian vào:</label></div>
+								<div class="col-8 "><input type="text" class="form-control" name="plate_num" disabled="true"></div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-4 "><label >Thời gian ra:</label></div>
 								<div class="col-8 "><input type="text" class="form-control" name="plate_num" disabled="true"></div>
 							</div>
 
