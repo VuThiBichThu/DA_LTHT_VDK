@@ -32,8 +32,6 @@
 	<script language="JavaScript">
 		function saveData()
 		{
-			txtimg = document.F1.txt_img.value;
-			txtplate = document.F1.txt_plate.value;
 			document.F1.submit();
 		}
 	</script>

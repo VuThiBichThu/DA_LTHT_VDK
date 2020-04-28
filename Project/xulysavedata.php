@@ -1,10 +1,10 @@
 <?php
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 
-$img_ps = $_REQUEST['txt_img']; 
+$img_ps = $_REQUEST["txt_img"]; 
 $img_ps = urldecode($img_ps);
 
-$plate_num = $_REQUEST['txt_plate'];
+$plate_num = $_REQUEST["txt_plate"];
 $plate_num = urldecode($plate_num);
 
 $day = date_create(date("Y-m-d"));
@@ -17,9 +17,12 @@ $time = $time->format("H:i:s");
 $link = mysqli_connect("localhost","root","") or die("Could not find the DB".mysqli_error());
 $db_selected = mysqli_select_db($link,"DOAN");
 
-$result = mysqli_query($link,"INSERT INTO DATA(day,time_start,time_end,img_ps,plate_num,fee) 
-	VALUES(CAST( '". $day ."'  AS DATE), '".$time."' ,CAST('00:00:00' AS TIME),
-	'$img_ps','$plate_num',0)");
+$count = mysqli_query($link,"SELECT * FROM DATA");
+$ID = mysqli_num_rows($count) + 1;
+
+$result = mysqli_query($link,"INSERT INTO DATA(id,day,time_start,time_end,img_ps,plate_num,fee) 
+							VALUES($ID, CAST( '". $day ."'  AS DATE), '".$time."' ,CAST('00:00:00' AS TIME),
+							'$img_ps','$plate_num',0)");
 mysqli_free_result($result);
 mysqli_close($link);
 

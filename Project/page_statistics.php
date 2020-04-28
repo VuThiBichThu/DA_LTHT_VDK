@@ -10,9 +10,11 @@ $date = date_create(date("y-m-d"));
 $date = $date->format("y-m-d");
 //echo $date;
 $data = mysqli_query($link,"SELECT * FROM DATA WHERE day='$date'");
+//$amount = mysqli_num_rows($data);
 
 $count_plate = mysqli_query($link,"SELECT COUNT(plate_num) AS total FROM DATA WHERE day='$date'");
 $amount = mysqli_fetch_assoc($count_plate);
+
 //echo amount['total'];
 $count_fee = mysqli_query($link,"SELECT SUM(fee) AS total FROM DATA WHERE day='$date'");
 $money = mysqli_fetch_assoc($count_fee);
