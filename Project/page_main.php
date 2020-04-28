@@ -16,7 +16,7 @@
 			//txtimg =document.F1.txt_img.value
 			//document.getElementById("image_human").src=`image/${txtimg}.jpg`
 			var fullPath = document.getElementById("image_human").src;
-     		var filename = fullPath.replace(/^.*[\\\/]/, '');
+			var filename = fullPath.replace(/^.*[\\\/]/, '');
 			document.F1.txt_img.value = filename;
 		}
 		
@@ -25,7 +25,7 @@
 		function getPlateNumber()
 		{
 			var fullPath = document.getElementById("image_moto").src;
-     		var filename = fullPath.replace(/^.*[\\\/]/, '');
+			var filename = fullPath.replace(/^.*[\\\/]/, '');
 			document.F1.txt_plate.value = filename;
 		}
 	</script>
@@ -35,11 +35,11 @@
 			txtimg = document.F1.txt_img.value;
 			txtplate = document.F1.txt_plate.value;
 			document.F1.submit();
-	}
-</script>
-<style type="text/css">
-	.jumbotron
-	{
+		}
+	</script>
+	<style type="text/css">
+		.jumbotron
+		{
      /* background: url('path/to/images/banner.jpg') no-repeat center center; 
      background-size: cover;*/
      padding: 5em inherit;
@@ -90,69 +90,71 @@
 			<div class="row justify-content-center">
 				<div class="col-sm-6 justify-content-center">
 					<div class="fakeimg"><img src="image/human (1).jpg" srcset="" alt="" 
-											id="image_human" width="400px" height="300px"></div>
+						id="image_human" width="400px" height="300px"></div>
 
-					<h5 class="text-center" style="margin-top:10px">NGƯỜI GỬI</h5>
-					<input type="button" class="btn btn-outline-secondary text-center" name="getPSon" 
-					value="Lấy hình người gửi" onclick="getIDperson()">
-				</div>
-				<div class="col-sm-6 justify-content-center">
-					<div class="fakeimg"><img src="image/moto (1).jpg" srcset="" alt="" 												id="image_moto" width="400px" height="300px"></div>
-
-					<h5 class="text-center" style="margin-top:10px">BIỂN SỐ XE</h5>
-					<input type="button" class="btn btn-outline-secondary text-center" name="getPNum" 
-					value="Lấy biển số xe" onclick="getPlateNumber()"> 
-				</div>
-			</div>
-			<hr>
-		</div>
-
-		<div class="container" style="margin-top:30px">
-			<div class="row">
-				<div class="col-sm-6">
-					<form>
-						<div class="text-center">
-							<div class="form-group">
-								<label >Người gửi:</label>
-								<input type="text" name="txt_img">
-							</div>
-							<div class="form-group">
-								<label >Biển số xe:</label>
-								<input type="text" name="txt_plate"> 
-							</div >
-							<input type="button" class="btn btn-primary" name="btnSave" value="Save" 
-							onclick = "saveData()">
-							<input type="reset" class="btn btn-primary" name="btnCancel" value="Cancel">
-						</div>
-					</form>
-				</div>
-	</form>
-	<form name="F2" action="xulyfee.php" method="post">
-				<div class="container col-sm-6 ">
-					<div class="row ">
-						<div class="col-12 "><input type="button" class="btn btn-primary" name="btnCancel" value="Tính phí"></div>
+						<h5 class="text-center" style="margin-top:10px">NGƯỜI GỬI</h5>
+						<input type="button" class="btn btn-outline-secondary text-center" name="getPSon" 
+						value="Lấy hình người gửi" onclick="getIDperson()">
 					</div>
-					<br>
-					<div class="row">
-						<div class="col-3 bg-dark text-white"><label >Biển Số:</label></div>
-						<div class="col-8 "><input type="text" name="img_ps"></div>
-					</div>
-					<br>
-					<div class="row">
-						<div class="col-3 bg-dark text-white"><label >Người Gửi Xe:</label></div>
-						<div class="col-8 "><input type="text" name="plate_num" disabled="true"></div>
+					<div class="col-sm-6 justify-content-center">
+						<div class="fakeimg"><img src="image/moto (1).jpg" srcset="" alt="" 												id="image_moto" width="400px" height="300px"></div>
 
-					</div>
-					<br>
-					<div class="row">
-						<div class="col-3 bg-dark text-white"><label >Phí:</label></div>
-						<div class="col-8 "><input type="text" name="plate_num" disabled="true"></div>
+						<h5 class="text-center" style="margin-top:10px">BIỂN SỐ XE</h5>
+						<input type="button" class="btn btn-outline-secondary text-center" name="getPNum" 
+						value="Lấy biển số xe" onclick="getPlateNumber()"> 
 					</div>
 				</div>
 				<hr>
 			</div>
-	</form>
 
-	</body>
-	</html>
+			<div class="container" style="margin-top:30px">
+				<div class="row">
+					<div class="col-sm-6 shadow p-3 mb-5 bg-white rounded"a>
+						<form>
+							<div class="text-center">
+								<div class="form-group">
+									<label >Người gửi:</label>
+									<input type="text" class="form-control" name="txt_img">
+								</div>
+								<div class="form-group">
+									<label >Biển số xe:</label>
+									<input type="text" class="form-control" name="txt_plate"> 
+								</div >
+								<input type="button" class="btn btn-primary" name="btnSave" value="Save" 
+								onclick = "saveData()">
+								<input type="reset" class="btn btn-primary" name="btnCancel" value="Cancel">
+							</div>
+						</form>
+					</div>
+					<div class="container  col-sm-5 shadow p-3 mb-5 bg-white rounded" >
+						<form name="F2" action="xulyfee.php" method="post">
+
+							<div class="row text-center">
+								<div class="col-12 "><input type="button" class="btn btn-primary" name="btnCancel" value="Tính phí"></div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-3 "><label >Biển Số:</label></div>
+								<div class="col-8 "><input type="text" class="form-control" name="img_ps"></div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-3 "><label >Người Gửi Xe:</label></div>
+								<div class="col-8 "><input type="text" class="form-control" name="plate_num" disabled="true"></div>
+
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-3 "><label >Phí:</label></div>
+								<div class="col-8 "><input type="text" class="form-control" name="plate_num" disabled="true"></div>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+</html>
 

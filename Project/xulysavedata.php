@@ -18,10 +18,10 @@ $link = mysqli_connect("localhost","root","") or die("Could not find the DB".mys
 $db_selected = mysqli_select_db($link,"DOAN");
 
 $result = mysqli_query($link,"INSERT INTO DATA(day,time_start,time_end,img_ps,plate_num,fee) 
-								 VALUES(CAST( '". $day ."'  AS DATE), '".$time."' ,CAST('00:00:00' AS TIME),
-								 '$img_ps','$plate_num',0)");
+	VALUES(CAST( '". $day ."'  AS DATE), '".$time."' ,CAST('00:00:00' AS TIME),
+	'$img_ps','$plate_num',0)");
 mysqli_free_result($result);
 mysqli_close($link);
-		
+
 header("Location:page_data.php");
 ?>
