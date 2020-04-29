@@ -62,6 +62,7 @@ echo '<!DOCTYPE html>
 <th>Người gửi</th>
 <th>Biển số xe</th>
 <th>Số tiền đóng (đồng)</th>
+<th>Xóa</th>
 </tr>
 </thead>';
 while($row=mysqli_fetch_array($result))
@@ -69,7 +70,8 @@ while($row=mysqli_fetch_array($result))
 	echo "<tbody>
 	<tr>
 	<td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td>
-	<td>".$row[4]."</td><td>".$row[5]."</th><td>".$row[6]."</td></tr>
+	<td>".$row[4]."</td><td>".$row[5]."</th><td>".$row[6]."</td>
+	<td align='center'><a href='xulyxoadata.php?ID=".$row[0]."'>X</a></td></tr>
 	</tbody>";
 }
 echo	'</table>

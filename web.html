@@ -1,0 +1,107 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { text-align:center; }
+    .vert { margin-bottom: 10%; }
+    .hori{ margin-bottom: 0%; }
+     figure img{
+     display:block;
+     width:auto;
+     height:45vh;
+     border-radius:4px;
+     margin-top:8px 
+}
+  </style>
+</head>
+<body>
+<div id='outerContainer'>
+  <figure style="height:45vh">
+    <div id="stream-container" class="image-container"> <p align="center"><img id="stream" src=""></p> </div>
+  </figure>
+</div>
+  <div id="container">
+    <h2 charset="utf-8" >Hệ thống giám sát biển số xe</h2>
+	<form  name="f1" action="./Project/page_main.php" method="post">
+	<input type="hidden" name="d" />
+    <input type="submit" name="web" value="SET IMG" onclick="xuly()"/>
+	</form>
+	<table align="center">
+	<tr align="center">
+	<td align="center">
+		<p>
+      <button onclick="capturePhoto1()">CAPTURE PHOTO</button>
+      <button onclick="reload1();">REFRESH</button>
+      <a href="saved-photo1" download="human.jpg"><button type="button">DOWNLOAD</button></a>
+    </p>
+	<td width="200px"></td>
+	</td>
+	<td align="center">
+		<p>
+		<button onclick="capturePhoto2()">CAPTURE PHOTO</button>
+		<button onclick="reload2();">REFRESH</button>
+		<a href="saved-photo2" download="moto.jpg"><button type="button">DOWNLOAD</button></a>
+		</p>
+	</td>
+	</tr>
+	<tr>
+		<td align="center" width="200px">
+		<div><img src="saved-photo1" id="photo1" width="80%"></div>
+		</td>
+		<td width="200px"></td>
+		<td align="center" width="200px">
+		<div><img src="saved-photo2" id="photo2" width="80%"></div>
+		</td>
+	</tr>
+	<tr>
+	<td align="center" width="200px"><h3 charset="utf-8" >Người gửi</h3></td>
+	<td width="200px"></td>
+	<td align="center" width="200px"><h3 charset="utf-8" >Biển số xe</h3></td>
+	</tr>
+	</table>
+  </div>
+</body>
+<script>
+var d=0;
+const view =document.getElementById('stream');
+const WS_URL = "ws://" + window.location.host + ":82";
+const ws = new WebSocket(WS_URL);
+ws.onmessage = message => {
+	if (message.data instanceof Blob) {
+	  var urlObject = URL.createObjectURL(message.data);
+	  view.src = urlObject;
+	}
+};
+  function reload1(){
+	img = document.getElementById("photo1");
+	img.src="saved-photo1?rand_number=" + Math.random();
+  }
+  function xuly(){
+	if (!window.name){
+		window.name="1";
+		d=1;
+	} else{
+		d=parseInt(window.name);
+		d++;
+		window.name=d;
+	}
+	document.f1.d.value=d;
+  }
+  function capturePhoto1() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', "/capture1", true);
+    xhr.send();
+	//window.alert(window.name);
+  }
+  function reload2(){
+	img = document.getElementById("photo2");
+	img.src="saved-photo2?rand_number=" + Math.random();
+  }
+  function capturePhoto2() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', "/capture2", true);
+    xhr.send();
+  }
+</script>
+</html>
