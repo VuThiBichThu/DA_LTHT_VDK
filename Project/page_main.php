@@ -36,6 +36,9 @@
 		}
 	</script>
 	<style type="text/css">
+		body {
+			background-image: linear-gradient(to right,  #ffffff 0%, #E3F1FF 100%);
+		}
 		.jumbotron
 		{
      /* background: url('path/to/images/banner.jpg') no-repeat center center; 

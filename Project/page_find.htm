@@ -22,7 +22,14 @@
 
 		}
 	</script>
+	<script>
+		document.getElementById('search').
+	</script>
 	<style type="text/css">
+
+		body {
+			background-image: linear-gradient(to right,  #ffffff 0%, #E3F1FF 100%);
+		}
 		.jumbotron
 		{
      /* background: url('path/to/images/banner.jpg') no-repeat center center; 
@@ -47,6 +54,7 @@
  	background-color: RoyalBlue;
  }
 </style>
+
 </head>
 <body bgcolor="#E7F3F8">
 
@@ -78,7 +86,7 @@
 	<form name="TimKiem" action="xulysearch.php">
 
 		<br><br><br>
-				
+
 		<div class="container col-sm-6 shadow-lg p-4 mb-4 bg-white ">
 			<div class="row justify-content-center">
 				<div class="col-3 "><h2 class="text-primary"> Tìm kiếm</h2></div>
@@ -102,9 +110,15 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="input-group">
-						<input class="form-control border-secondary py-2" type="search"  placeholder="Nhập">
+
+						<input class="form-control border-secondary py-2" type="search"  placeholder="Nhập" id="search"  required autofocus="" oninvalid="this.setCustomValidity('Nhập thông tin cần tìm kiếm!')"
+						oninput="setCustomValidity('')"></input> 
+						<script>
+							document.getElementById('search').setCustomValidity('Your custom validation message comes here');
+						</script>
+
 						<div class="input-group-append">
-							<button class="btn btn-outline-secondary"type="button">
+							<button class="btn btn-outline-secondary btn-block"type="submit">
 								<i class="fa fa-search"></i>
 							</button>
 						</div>
