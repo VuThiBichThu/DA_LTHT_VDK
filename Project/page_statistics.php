@@ -50,6 +50,9 @@ echo '<!DOCTYPE html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <style type="text/css">
+body {
+	background-image: linear-gradient(to right,  #ffffff 0%, #E3F1FF 100%);
+}
 .jumbotron
 {
 	padding: 5em inherit;
@@ -84,7 +87,8 @@ echo '<!DOCTYPE html>
 </ul>
 </div>  
 </nav>
-<div class="container">
+<br>
+<div class="container shadow-lg p-4 mb-4 bg-white">
 <form>
 
 <h2 class="text-center">BẢNG THỐNG KÊ</h2>
