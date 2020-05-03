@@ -17,8 +17,9 @@ $time = $time->format("H:i:s");
 $link = mysqli_connect("localhost","root","") or die("Could not find the DB".mysqli_error());
 $db_selected = mysqli_select_db($link,"DOAN");
 
-$count = mysqli_query($link,"SELECT * FROM DATA");
-$ID = mysqli_num_rows($count) + 1;
+$count = mysqli_query($link,"SELECT MAX(id) AS idmax FROM DATA");
+$row = mysqli_fetch_array($count);
+$ID = $row["idmax"]+1;
 
 $result = mysqli_query($link,"INSERT INTO DATA(id,day,time_start,time_end,img_ps,plate_num,fee) 
 							VALUES($ID, CAST( '". $day ."'  AS DATE), '".$time."' ,CAST('00:00:00' AS TIME),

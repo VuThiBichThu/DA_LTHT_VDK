@@ -55,9 +55,9 @@ body {
 </nav>
 <br>
 <div class="container shadow-lg p-4 mb-4 bg-white">
-<form>
+<form name="F4" action="xulydelall_data.php" method="post">
 <h2 class="text-center">BẢNG DỮ LIỆU</h2>
-
+<input type="submit" class="btn btn-primary" name="delall" value="Xóa Tất Cả">
 <table class="table table-bordered table-hover">
 <thead class="thead-light">
 <tr>

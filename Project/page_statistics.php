@@ -59,7 +59,8 @@ body {
 <form name="F3" action="xulystatistics.php" method="post">
 
 <h2 class="text-center">BẢNG THỐNG KÊ</h2>
-<input type="submit" class="btn btn-primary" name="btnTK" value="Thống Kê Ngày Hôm Nay" align="right">
+<input type="submit" class="btn btn-primary" name="TK" value="Thống Kê Ngày Hôm Nay">
+<input type="submit" class="btn btn-primary" name="delallTK" value="Xóa Tất Cả">
 <table class="table table-bordered table-hover">
 <thead class="thead-light">
 <tr>
